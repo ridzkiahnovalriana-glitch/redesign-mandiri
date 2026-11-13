@@ -1,4 +1,3 @@
-/* Styling Global & Warna Tema Bank Mandiri */
 :root {
     --ridzki-mandiri-blue: #003366;
     --ridzki-mandiri-gold: #FFB81C;
@@ -20,7 +19,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header & Navigasi Desktop */
 #ridzki_header {
     background-color: var(--ridzki-mandiri-blue);
     color: var(--ridzki-white);
@@ -34,7 +32,6 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Styling untuk Logo Gambar di Navbar */
 .ridzki_logo {
     display: flex;
     align-items: center;
@@ -70,7 +67,6 @@ body {
     color: var(--ridzki-mandiri-gold) !important;
 }
 
-/* Tombol Hamburger untuk Mobile (Awalnya Disembunyikan di Desktop) */
 .ridzki_menu_toggle {
     display: none;
     flex-direction: column;
@@ -86,7 +82,6 @@ body {
     transition: 0.3s;
 }
 
-/* Hero Section */
 .ridzki_hero {
     background: linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
     color: var(--ridzki-white);
@@ -105,7 +100,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Tombol */
 .ridzki_btn {
     display: inline-block;
     background-color: var(--ridzki-mandiri-gold);
@@ -123,7 +117,6 @@ body {
     background-color: #e09f0f;
 }
 
-/* Konten Utama / Card */
 .ridzki_container {
     max-width: 1100px;
     margin: 3rem auto;
@@ -141,13 +134,23 @@ body {
     background: var(--ridzki-white);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border-top: 4px solid var(--ridzki-mandiri-blue);
+    border-left: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .ridzki_card h3 {
     color: var(--ridzki-mandiri-blue);
     margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.ridzki_card p, 
+.ridzki_card li {
+    color: #334155; 
+    line-height: 1.7;
 }
 
 /* Form Kontak Khusus */
@@ -172,8 +175,6 @@ body {
     margin-top: 1rem;
     font-weight: bold;
 }
-
-/* Footer */
 #ridzki_footer {
     background-color: var(--ridzki-mandiri-dark);
     color: var(--ridzki-white);
@@ -183,14 +184,12 @@ body {
     font-size: 0.9rem;
 }
 
-/* --- RESPONSIVE MOBILE SETTINGS (Max Width 768px) --- */
 @media (max-width: 768px) {
     .ridzki_menu_toggle {
-        display: flex; /* Munculkan tombol garis tiga di HP */
+        display: flex; 
     }
-
     #ridzki_nav {
-        display: none; /* Sembunyikan menu secara default di HP */
+        display: none; 
         width: 100%;
         position: absolute;
         top: 100%;
@@ -199,8 +198,6 @@ body {
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         padding: 1rem 0;
     }
-
-    /* Kelas aktif untuk menampilkan menu saat tombol diklik */
     #ridzki_nav.ridzki_mobile_active {
         display: block;
     }
@@ -218,4 +215,93 @@ body {
     .ridzki_hero p {
         font-size: 1rem;
     }
+}
+#ridzki_footer_detail {
+    background-color: #0b2239;
+    color: var(--ridzki-white);
+    padding: 4rem 5% 2rem 5%;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+.ridzki_footer_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 3rem;
+}
+
+.ridzki_footer_col h4 {
+    color: var(--ridzki-mandiri-gold);
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.ridzki_footer_col ul {
+    list-style: none;
+}
+
+.ridzki_footer_col ul li {
+    margin-bottom: 0.75rem;
+}
+
+.ridzki_footer_col ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.ridzki_footer_col ul li a:hover {
+    color: var(--ridzki-mandiri-gold);
+}
+
+.ridzki_footer_col p {
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.ridzki_footer_bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.ridzki_footer_bottom_links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.ridzki_footer_bottom_links a {
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+.ridzki_footer_bottom_links a:hover {
+    color: var(--ridzki-white);
+}
+
+@media (max-width: 768px) {
+    .ridzki_footer_bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.ridzki_spotlight_img {
+    width: 100%;
+    max-width: 320px; 
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
